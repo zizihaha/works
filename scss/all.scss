@@ -1,0 +1,311 @@
+@import "mixin";
+
+$primary: #e41c6f;
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  @include w500{
+    font-size: 55%;
+  }
+  @include w450{
+    font-size: 45%;
+  }
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-heading {
+  font-size: 5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 15rem;
+  border-bottom: 0.3rem solid #333;
+  text-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+}
+
+
+/* Section1 */
+.section-1{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, .3),rgba(255, 255, 255, .3)),url(https://images.unsplash.com/photo-1585937250791-efc81fc76e43?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80) no-repeat center / cover;
+  flex-direction: column;
+    &-heading{
+      font-size: 6rem;
+      font-weight: 700;
+      color: #fff;
+      background-color: $primary;
+      padding: 0 3rem;
+      margin-bottom: 5rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      border-bottom: .3rem solid #fff;
+      text-shadow: .2rem .2rem 1rem #555;
+      transform: skew(-10deg);
+      @include w800{
+        font-size: 4rem;
+      }
+      @include w600{
+        font-size: 3rem;
+      }
+      @include w450{
+        font-size: 2.5rem;
+      }
+    }
+    &-btn{
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #333;
+      background-color: #fff;
+      border: .3rem solid #333;
+      padding: .5rem 1rem;
+      text-transform: uppercase;
+      letter-spacing: .3px;
+    }  
+}
+.person{
+  &-img{
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .8rem solid $primary;
+    border-top: .8rem solid #fff8eb;
+    border-right: .8rem solid #fff8eb;
+    background-color: rgba(255, 255, 255, .7);
+    box-shadow: 0 0 20px #fff;
+    opacity: .9;
+  }
+  &-name{
+    font-size: 2rem;
+    color: #fff;
+    background-color: $primary;
+    margin: 5rem 0;
+    padding: .5rem 3rem;
+    letter-spacing: .3rem;
+    transform: skew(-10deg);
+  }
+}
+/* End of Section1 */
+
+
+
+/* Navbar */
+.navbar{
+  width: 100%;
+  height: 4rem;
+  background-color: $primary;
+  box-shadow: .2rem .2rem .5rem #555;
+  z-index: 300;
+    &-link{
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0 3rem;
+      letter-spacing: .3rem;
+      text-transform: uppercase;
+      position: relative;
+      transition: color .2s;
+      &::before{
+        content: '';
+        width: 0;
+        height: 0.2rem;
+        background-color: #fff;
+        position: absolute;
+        right: -15%;
+        bottom: -0.3rem;
+        transition: width .2s;
+      }
+      &:hover{
+        color: #fff;
+        &::before{
+          width: 130%;
+        }
+      }
+      @include w600{
+        font-size: 1.5rem;
+        margin: 0 2rem;
+      }
+      @include w450{
+        margin: 0 1.5rem;
+      }
+    }
+}
+/* End of Navbar */
+
+.change{
+  &.navbar-link{
+    color:#fff;
+    &::before{
+      width: 130%;
+    }
+  }
+}
+
+/* Section3 */
+.section-3{
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0;
+  background-color: #eef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-wrapper{
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.project{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  background-color: #fff;
+  box-shadow: .3rem .3rem .5rem #777;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .3s;
+  &:hover{
+    box-shadow: 1rem 1rem 1rem #777;
+    .project-text{
+      top: 5rem;
+      transition: top .3s .3s;
+    }
+    .project-link{
+      bottom: 5rem;
+      transition: bottom .3s .3s;
+    }
+    .project-img{
+      opacity: 0.2;
+    }
+  }
+    &-text{
+      text-align: center;
+      letter-spacing: 0.1rem;
+      position: absolute;
+      top: -10rem;
+      z-index: 10;
+      transition: top .3s;
+    }
+    &-name{
+      font-size: 3rem;
+      font-weight: 700;
+      color: #333;
+      text-transform: capitalize;
+    }
+    &-technologies{
+      font-size: 1.8rem;
+      color: $primary;  
+    }
+    &-img{
+      width: 40rem;
+      transition: opacity .2s;
+      @include w600{
+        width: 100%;
+      }
+    }
+    &-link{
+      font-size: 2rem;
+      font-weight: 500;
+      color: #333;
+      background-color: #fff;
+      letter-spacing: .1rem;
+      border: 0.3rem solid $primary;
+      padding: 0 1rem;
+      transform: skew(-10deg);
+      position: absolute;
+      bottom: -5rem;
+      transition: bottom .3s;
+    }
+}
+/* End of Section3 */
+
+
+.section-4{
+  width: 100%;
+  height: 700px;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  &-heading{
+    color: #fff;
+    box-shadow: none;
+    border-color: #fff;
+    margin-bottom: 5rem;
+  }
+  @include w1200{
+    height: 80vh;
+  }
+}
+
+// .card{
+//   &-icons{
+//     display: flex;
+//     width: 50%;
+//     justify-content: space-around;
+//     transition: color .3s;
+//   }
+//   &-icon{
+//     font-size: 20px;
+//     color: #fff;
+//   }
+//   &-icon-link{
+//     width: 35px;
+//     height: 35px;
+//     border: 1px solid #fff;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 5px;
+//     transition: border .3s;
+//     &:hover {
+//       border: 1px solid $primary;
+//       .card-icon{
+//         color: $primary;
+//       }
+//     }
+//   }
+// }
+
+
+.section-5{
+  width: 100%;
+  height: 300px;
+  background-color: #222;
+}
+
+.copyright {
+  color: #aaa;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  text-align: center;
+}

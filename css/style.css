@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  font-family: 'Josefin Sans',sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/bg.jpg) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/bg.jpg) no-repeat center;
+}
+
+.card-wrapper {
+  height: 600px;
+  width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 5px;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  overflow: hidden;
+}
+
+.card-wrapper:hover {
+  -webkit-box-shadow: 0 0 30px #fff;
+          box-shadow: 0 0 30px #fff;
+}
+
+.card-wrapper:hover .card {
+  top: 0;
+}
+
+.card {
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: linear-gradient(190deg, rgba(21, 199, 30, 0.8) 50%, rgba(233, 67, 67, 0.8) 0);
+  -webkit-transition: top .3s .4s;
+  transition: top .3s .4s;
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 15px;
+  border: 2px solid #fff;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.card-heading {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0a9751), to(#06831b));
+  background: linear-gradient(#0a9751, #06831b);
+  width: 70%;
+  text-align: center;
+  padding: 5px 0;
+  -webkit-transform: perspective(1000px) skewX(-20deg) rotateY(40deg);
+          transform: perspective(1000px) skewX(-20deg) rotateY(40deg);
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.card-heading:hover {
+  -webkit-transform: perspective(1000px) skewX(10deg) rotateY(360deg);
+          transform: perspective(1000px) skewX(10deg) rotateY(360deg);
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-paragraph {
+  width: 85%;
+  font-size: 18px;
+  color: #ddd;
+  text-align: justify;
+  position: relative;
+}
+
+.card-paragraph::first-letter {
+  margin-left: 40px;
+}
+
+.card-paragraph i {
+  color: #fff;
+  font-size: 25px;
+  font-style: italic;
+  position: absolute;
+}
+
+.card-paragraph i:last-child {
+  bottom: -10%;
+  margin-left: 10px;
+}
+
+.card-paragraph i:first-child {
+  top: -10%;
+}
+
+.card-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.card-icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+.card-icon-link {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  -webkit-transition: border .3s;
+  transition: border .3s;
+}
+
+.card-icon-link:hover {
+  border: 1px solid #1b5cf5;
+}
+
+.card-icon-link:hover .card-icon {
+  color: #1b5cf5;
+}
+
+.card-btn {
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 35px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6837ee), to(#0d2b7e));
+  background: linear-gradient(#6837ee, #0d2b7e);
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 12px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
