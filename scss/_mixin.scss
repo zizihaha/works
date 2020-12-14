@@ -27,3 +27,22 @@
       @content;
   }
 }
+
+@mixin h667{
+  @media (max-height:667px){
+      @content;
+  }
+}
+
+@mixin h600{
+  @media (max-height:600px){
+      @content;
+  }
+}
+
+@mixin h414{
+  @media (max-height:414px){
+      @content;
+  }
+}
+

@@ -35,9 +35,12 @@ html{
   color: #333;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
   border-bottom: 0.3rem solid #333;
   text-shadow: 0.2rem 0.2rem 0.5rem #555;
+  @include h414{
+    margin-bottom: 5rem;
+  }
 }
 
 .sticky{
@@ -73,6 +76,13 @@ html{
       @include w450{
         font-size: 2.5rem;
       }
+      @include h600{
+        font-size: 2rem;
+        margin-bottom: 3rem;
+      }
+      @include h414{
+        display: none;
+      }
     }
     &-btn{
       font-size: 1.7rem;
@@ -83,9 +93,13 @@ html{
       padding: .5rem 1rem;
       text-transform: uppercase;
       letter-spacing: .3px;
+      @include h414{
+        display: none;
+      }
     }  
 }
 .person{
+  border: 1px solid red;
   &-img{
     width: 25rem;
     height: 25rem;
@@ -97,6 +111,10 @@ html{
     background-color: rgba(255, 255, 255, .7);
     box-shadow: 0 0 20px #fff;
     opacity: .9;
+    @include h600{
+      width: 20rem;
+      height: 20rem;
+    }
   }
   &-name{
     font-size: 2rem;
@@ -106,6 +124,9 @@ html{
     padding: .5rem 3rem;
     letter-spacing: .3rem;
     transform: skew(-10deg);
+    @include h600{
+      margin: 3rem 0;
+    }
   }
 }
 /* End of Section1 */
@@ -173,6 +194,9 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include h414{
+    padding: 5rem 0;
+  }
 }
 
 .projects-wrapper{
@@ -196,10 +220,16 @@ html{
     .project-text{
       top: 5rem;
       transition: top .3s .3s;
+      @include h667{
+        top: 4rem;
+      }
     }
     .project-link{
       bottom: 5rem;
       transition: bottom .3s .3s;
+      @include h667{
+        bottom: 4rem;
+      }
     }
     .project-img{
       opacity: 0.2;

@@ -12,6 +12,7 @@ window.addEventListener("scroll", () => {
   // console.log('window.pageYOffset: ',window.pageYOffset, 'home-section1.offsetTop: ',section1.offsetTop);
   // console.log('window.pageYOffset: ',window.pageYOffset, 'protfolio-section3.offsetTop: ',section3.offsetTop);
   // console.log('window.pageYOffset: ',window.pageYOffset, 'contact-section4.offsetTop: ',section4.offsetTop);
+  console.log('window.pageYOffset: ',window.pageYOffset, 'navbarOffsetTop: ',navbarOffsetTop);
 });
 
 const mainFn = () => {
@@ -27,7 +28,7 @@ const mainFn = () => {
   sections.forEach((section, i) => {
 
     if (window.pageYOffset >= section.offsetTop - 10) {
-      console.log('window.pageYOffset: ',window.pageYOffset, '目前 section.offsetTop: ',section.offsetTop);
+      // console.log('window.pageYOffset: ',window.pageYOffset, '目前 section.offsetTop: ',section.offsetTop);
 
       navbarLinks.forEach((navbarLink) => {
         navbarLink.classList.remove("change");
