@@ -73,7 +73,7 @@ html {
 }
 
 .section-1-heading {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 700;
   color: #fff;
   background-color: #e41c6f;
@@ -370,8 +370,8 @@ html {
 .project-link {
   font-size: 2rem;
   font-weight: 500;
-  color: #333;
-  background-color: #fff;
+  color: #fff;
+  background-color: #e41c6f;
   letter-spacing: .1rem;
   border: 0.3rem solid #e41c6f;
   padding: 0 1rem;
@@ -381,6 +381,8 @@ html {
   bottom: -5rem;
   -webkit-transition: bottom .3s;
   transition: bottom .3s;
+  text-shadow: 0 0 10px #fff;
+  padding: 2px 15px;
 }
 
 /* End of Section3 */

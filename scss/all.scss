@@ -56,7 +56,7 @@ html{
   background: linear-gradient(rgba(255, 255, 255, .3),rgba(255, 255, 255, .3)),url(https://images.unsplash.com/photo-1585937250791-efc81fc76e43?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80) no-repeat center / cover;
   flex-direction: column;
     &-heading{
-      font-size: 6rem;
+      font-size: 4rem;
       font-weight: 700;
       color: #fff;
       background-color: $primary;
@@ -264,8 +264,8 @@ html{
     &-link{
       font-size: 2rem;
       font-weight: 500;
-      color: #333;
-      background-color: #fff;
+      color: #fff;
+      background-color: #e41c6f;
       letter-spacing: .1rem;
       border: 0.3rem solid $primary;
       padding: 0 1rem;
@@ -273,6 +273,8 @@ html{
       position: absolute;
       bottom: -5rem;
       transition: bottom .3s;
+      text-shadow: 0 0 10px #fff;
+      padding: 2px 15px;
     }
 }
 /* End of Section3 */
